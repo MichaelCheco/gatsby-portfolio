@@ -10,7 +10,7 @@ const H1 = styled.h1`
 const IndexPage = () => (
   <Layout>
     <H1>
-      <marquee direction="right">Hello {'🚀'}</marquee>
+      Hello {'🚀'}
     </H1>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <Image />
