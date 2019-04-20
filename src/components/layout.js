@@ -25,8 +25,16 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>{children}</div>
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <div
+          style={{
+            position: 'relative',
+            height: '100vh',
+            backgroundImage: 'linear-gradient(#B4C5E4, #3066BE)',
+          }}
+        >
+          {children}
+        </div>
       </>
     )}
   />
