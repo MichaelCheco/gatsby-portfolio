@@ -1,17 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import Layout from '../components/layout'
 
-const H1 = styled.h1`
-  color: red;
-`
-const IndexPage = () => (
-  <Layout>
-    <H1>Hello {'🚀'}</H1>
+const Home = () => {
+  return (
+    <Layout>
+      <h1>Hello {'🚀'}</h1>
 
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+  )
+}
 
-export default IndexPage
+export default Home
