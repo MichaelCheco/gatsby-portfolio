@@ -6,12 +6,18 @@ import { useSpring, animated } from 'react-spring'
 import { GlobalStyles } from '../utils.js/reset'
 const Div = styled.div`
   border: 3px solid red;
-  background: palevioletred;
-  width: 45%;
-  height: 50vh;
+  grid-row: 2 / span 2;
+  width: 50%;
+  height: 100%;
+  /* width: 45%; */
+  /* height: 30vh; */
 `
 const Container = styled.div`
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  /* align-items: center; */
   border: 5px solid black;
   width: 100%;
   height: 100vh;
@@ -37,6 +43,7 @@ const Home = () => {
       </svg>
       <Container>
         <Div>Hello</Div>
+        <Div>Goodbye</Div>
       </Container>
     </Layout>
   )

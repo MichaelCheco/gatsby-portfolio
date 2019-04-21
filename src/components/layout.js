@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
           style={{
             position: 'relative',
             height: '100vh',
-            backgroundImage: 'linear-gradient(#B4C5E4, #3066BE)',
+            backgroundImage: 'linear-gradient(#AAFFA9, #11FFBD)',
           }}
         >
           {children}
