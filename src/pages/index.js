@@ -10,12 +10,19 @@ const Div = styled.div`
   border: 3px solid red;
   height: 100%;
 `
+const Header = styled.header`
+  position: relative;
+  height: 750px;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  border-bottom-left-radius: 30% 20%;
+  border-bottom-right-radius: 30% 20%;
+`
 const Container = styled(animated.div)`
   display: grid;
+  border: 3px solid black;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  /* align-content: center; */
   align-items: center;
   width: 100%;
   height: 100vh;
@@ -24,35 +31,10 @@ const Home = () => {
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 300 })
   return (
     <Layout>
-      <GlobalStyles />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 200 100"
-        preserveAspectRatio="none"
-        style={{
-          position: 'absolute',
-          bottom: '0',
-          width: '100%',
-          height: '100px',
-        }}
-      >
-        <circle fill="white" cx="0" cy="100" r="100" />
-        <circle fill="white" cx="200" cy="100" r="100" />
-      </svg>
       <Container style={fadeIn}>
-        {/* <Div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          corrupti perspiciatis voluptatem itaque doloremque iure, eveniet odit
-          laboriosam distinctio reprehenderit voluptates debitis dolore, fuga
-          eligendi esse ipsum eos neque quisquam. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Repudiandae magni perspiciatis, quaerat
-          aperiam qui molestiae, numquam dicta aliquid nostrum earum distinctio
-          maxime ex, quis velit. Quam blanditiis excepturi fugit sint.
-        </Div> */}
-        <Card />
-        <Card />
+        <h1>Michael Checo</h1>
+        <Cardd />
       </Container>
-      <Projects />
     </Layout>
   )
 }
@@ -74,28 +56,5 @@ const Cardd = styled.div`
     box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
   }
 `
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1,
-]
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-function Card() {
-  const [props, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: { mass: 5, tension: 350, friction: 40 },
-  }))
-  return (
-    <Cardd>
-      <animated.a
-        href="https://github.com"
-        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-        onMouseLeave={() => set({ xys: [0, 0, 1] })}
-        style={{ transform: props.xys.interpolate(trans) }}
-      />
-    </Cardd>
-  )
-}
 
 export default Home

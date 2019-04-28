@@ -1,8 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from '@emotion/styled'
+import { GlobalStyles } from '../utils.js/reset'
 import { StaticQuery, graphql } from 'gatsby'
 import './layout.css'
+const Header = styled.header`
+  position: relative;
+  height: 750px;
+  background-image: linear-gradient(#aaffa9, #11ffbd);
+  border-bottom-left-radius: 30% 20%;
+  border-bottom-right-radius: 30% 20%;
+`
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -24,17 +33,10 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <GlobalStyles />
         </Helmet>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <div
-          style={{
-            position: 'relative',
-            height: '100vh',
-            backgroundImage: 'linear-gradient(#AAFFA9, #11FFBD)',
-          }}
-        >
-          {children}
-        </div>
+        <Header>{children}</Header>
       </>
     )}
   />
