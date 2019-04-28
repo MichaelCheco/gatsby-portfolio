@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { useSpring, animated } from 'react-spring'
+import '../styles.css'
 const Container = styled.div`
-  background-color: #11ffbd;
   margin-top: 160px;
-  height: 300px;
+`
+const H1 = styled.h1`
+  text-align: center;
+  font-size: 50px;
 `
 const Projects = () => {
-  return <Container>PROJECTS</Container>
+  return (
+    <Container>
+      <H1>Projects</H1>
+    </Container>
+  )
 }
 
 export default Projects
