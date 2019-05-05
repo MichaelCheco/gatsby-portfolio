@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from '@emotion/styled'
 import { GlobalStyles } from '../utils.js/reset'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import './layout.css'
 const Header = styled.header`
   position: relative;
@@ -36,7 +36,10 @@ const Layout = ({ children }) => (
           <GlobalStyles />
         </Helmet>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <Header>{children}</Header>
+        <>
+          <Link to="/">My Portfolio</Link>
+          <Header>{children}</Header>
+        </>
       </>
     )}
   />
