@@ -1,0 +1,16 @@
+[
+  {
+    "title": "My Project",
+    "slug": "project-1",
+    "url": "https://example.com",
+    "image": "../src/images/astronaut.jpg",
+    "description": "This is one of my projects!"
+  },
+  {
+    "title": "Another Project",
+    "slug": "project-2",
+    "url": "https://example.com",
+    "image": "../src/images/astronaut.jpg",
+    "description": "This is another one of my projects!"
+  }
+]
