@@ -9,7 +9,13 @@ export const query = graphql`
       title
       description
       url
-      image
+      image {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   }
 `
@@ -18,14 +24,15 @@ const ProjectTemplate = ({ data }) => {
   const project = data.projectsJson
   const title = project.title
   const description = project.description
-  const image = project.image
+  const imageData = project.image.childImageSharp.fluid
   const url = project.url
+
   return (
     <Layout>
       <Project
         title={title}
         description={description}
-        image={image}
+        imageData={imageData}
         url={url}
       />
     </Layout>

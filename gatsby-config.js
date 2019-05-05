@@ -1,41 +1,15 @@
 module.exports = {
-  siteMetadata: {
-    title: `Michael Checo's Portfolio`,
-  },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `project`,
-        path: `./data`,
-      },
-    },
-    `gatsby-transformer-json`,
-    'gatsby-transformer-sharp',
-    `gatsby-plugin-emotion`,
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'Michael Checo',
-        short_name: 'Michael Checo',
-        start_url: '/',
-        background_color: '#EA526F',
-        theme_color: '#EA526F',
-        display: 'minimal-ui',
-        icon: 'src/images/me.jpg', // This path is relative to the root of the site.
+        name: 'project',
+        path: './data',
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-transformer-json',
+    `gatsby-plugin-emotion`,
   ],
 }

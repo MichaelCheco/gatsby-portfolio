@@ -1,52 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import { GlobalStyles } from '../utils.js/reset'
-import { StaticQuery, graphql, Link } from 'gatsby'
 import './layout.css'
-const Header = styled.header`
-  position: relative;
-  height: 750px;
-  background-image: linear-gradient(#aaffa9, #11ffbd);
-  border-bottom-left-radius: 30% 20%;
-  border-bottom-right-radius: 30% 20%;
+const Main = styled.main`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5rem auto;
+  max-width: 90%;
+  width: 57ch;
 `
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-          <GlobalStyles />
-        </Helmet>
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <>
-          <Link to="/">My Portfolio</Link>
-          <Header>{children}</Header>
-        </>
-      </>
-    )}
-  />
-)
+const Header = styled.header`
+  background-color: #0076ff;
+  a {
+    color: #ffffff;
+  }
+`
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+const Layout = ({ children }) => (
+  <React.Fragment>
+    <Header className="header">
+      <Link to="/">My Portfolio</Link>
+    </Header>
+    <Main className="content">{children}</Main>
+  </React.Fragment>
+)
 
 export default Layout
