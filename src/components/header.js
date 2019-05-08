@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-// about work blog
 const Header = ({ siteTitle }) => (
   <div>
     <div>
