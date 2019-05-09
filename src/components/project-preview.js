@@ -1,12 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { useSpring, animated } from 'react-spring'
 import Image from 'gatsby-image'
 import styled from '@emotion/styled'
-const WIP = styled.h1`
-  color: red;
-  font-size: 50px;
-  position: absolute;
-`
 export const Card = styled.div`
   transition: box-shadow 0.3s;
   width: 90%;
@@ -29,12 +25,17 @@ export const Card = styled.div`
   &:hover {
     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
   }
+  @media (max-width: 700px) {
+    margin: 10px;
+    padding: 10px;
+    margin-left: 34px;
+  }
 `
 const P = styled.p`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
-const Button = styled.button`
+export const Button = styled.button`
   width: 174px;
   height: 45px;
   background-color: #ffffff;
@@ -62,27 +63,24 @@ const Button = styled.button`
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
 `
-const ProjectPreview = ({ title, description, slug, imageData }) => (
-  <div>
-    <Card>
-      <Link to={`/${slug}/`}>
-        <Image fluid={imageData} alt={title} />
-      </Link>
-      <h2>
-        <Link to={`/${slug}/`}>{title}</Link>
-      </h2>
-      <P>{description}</P>
-      <Button>
-        <Link to={`/${slug}/`}>VIEW THIS PROJECT &rarr;</Link>
-      </Button>
-    </Card>
-  </div>
-)
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
-  border: 1px solid #999999;
-  border-radius: 3px;
-`
+const ProjectPreview = ({ title, description, slug, imageData }) => {
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } })
+  return (
+    <animated.div style={props}>
+      <Card>
+        <Link to={`/${slug}/`}>
+          <Image fluid={imageData} alt={title} />
+        </Link>
+        <h2>
+          <Link to={`/${slug}/`}>{title}</Link>
+        </h2>
+        <P>{description}</P>
+        <Button>
+          <Link to={`/${slug}/`}>VIEW THIS PROJECT &rarr;</Link>
+        </Button>
+      </Card>
+    </animated.div>
+  )
+}
+
 export default ProjectPreview
