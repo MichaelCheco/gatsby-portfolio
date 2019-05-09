@@ -66,20 +66,20 @@ export const Button = styled.button`
 const ProjectPreview = ({ title, description, slug, imageData }) => {
   const props = useSpring({ opacity: 1, from: { opacity: 0 } })
   return (
-    <animated.div style={props}>
-      <Card>
-        <Link to={`/${slug}/`}>
-          <Image fluid={imageData} alt={title} />
-        </Link>
-        <h2>
-          <Link to={`/${slug}/`}>{title}</Link>
-        </h2>
-        <P>{description}</P>
-        <Button>
-          <Link to={`/${slug}/`}>VIEW THIS PROJECT &rarr;</Link>
-        </Button>
-      </Card>
-    </animated.div>
+    // <animated.div style={props}>
+    <Card>
+      <Link to={`/${slug}/`}>
+        <Image fluid={imageData} alt={title} />
+      </Link>
+      <h2>
+        <Link to={`/${slug}/`}>{title}</Link>
+      </h2>
+      <P>{description}</P>
+      <Button>
+        <Link to={`/${slug}/`}>VIEW THIS PROJECT &rarr;</Link>
+      </Button>
+    </Card>
+    // </animated.div>
   )
 }
 

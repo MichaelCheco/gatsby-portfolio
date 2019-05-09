@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSpring, animated } from 'react-spring'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import './layout.css'
@@ -48,16 +49,21 @@ const Header = styled.header`
   }
 `
 
-const Layout = ({ children }) => (
-  <React.Fragment>
-    <Div />
-    <Header className="header">
-      <Link to="/">Projects</Link>
-      <Link to="/about">About Me</Link>
-      <Link to="/contact">Contact</Link>
-    </Header>
-    <Container className="content">{children}</Container>
-  </React.Fragment>
-)
+const Layout = ({ children }) => {
+  const props = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 50 })
+  return (
+    <React.Fragment>
+      <animated.div style={props}>
+        <Div />
+        <Header className="header">
+          <Link to="/">Projects</Link>
+          <Link to="/about">About Me</Link>
+          <Link to="/contact">Contact</Link>
+        </Header>
+        <Container className="content">{children}</Container>
+      </animated.div>
+    </React.Fragment>
+  )
+}
 
 export default Layout
