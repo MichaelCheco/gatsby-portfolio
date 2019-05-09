@@ -65,11 +65,11 @@ export const Card = styled.div`
 const Icon = styled.div`
   a {
     color: #000000;
-  }
-  i {
     font-size: 200px;
     margin: 10px;
     padding: 10px;
+  }
+  i {
     cursor: pointer;
   }
 `

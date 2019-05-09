@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { useSpring, animated } from 'react-spring'
-
+import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import { P } from '../components/project'
 export const Header = styled.header`
@@ -59,6 +59,14 @@ const about = () => {
 
   return (
     <>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+        />
+      </Helmet>
       <Header className="header">
         <Link to="/">Projects</Link>
         <Link to="/about">About Me</Link>
@@ -101,13 +109,15 @@ const Icons = styled.div`
   width: 100%;
   a {
     color: #000000;
+    margin: 10px;
+    padding: 10px;
   }
   i {
     margin: 10px;
     padding: 10px;
     cursor: pointer;
   }
-  font-size: 50px;
+  font-size: 70px;
   justify-content: center;
 `
 const Container = styled.div`
