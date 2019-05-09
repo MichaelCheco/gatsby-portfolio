@@ -10,7 +10,30 @@ const Container = styled.div`
   border-radius: 3px;
   max-width: 1000px;
   width: 100%;
+  /* position: absolute;
+  background: linear-gradient(
+    to bottom right,
+    transparent calc(50% - 1px),
+    black calc(50% - 1px),
+    black 50%,
+    transparent 50%
+  ); */
 `
+const Div = styled.div`
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  bottom: 15%;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom right,
+    transparent calc(50% - 1px),
+    black calc(50% - 1px),
+    black 50%,
+    transparent 50%
+  );
+`
+
 const Header = styled.header`
   background-color: #000000;
   display: flex;
@@ -27,15 +50,21 @@ const Header = styled.header`
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `
-
+const Test = styled.div`
+  background-color: #fafbfc;
+  z-index: -2;
+`
 const Layout = ({ children }) => (
   <React.Fragment>
+    {/* <Test> */}
+    <Div />
     <Header className="header">
       <Link to="/">Projects</Link>
       <Link to="/about">About Me</Link>
       <Link to="/contact">Contact</Link>
     </Header>
     <Container className="content">{children}</Container>
+    {/* </Test> */}
   </React.Fragment>
 )
 

@@ -7,14 +7,15 @@ const WIP = styled.h1`
   font-size: 50px;
   position: absolute;
 `
-const Card = styled.div`
+export const Card = styled.div`
   transition: box-shadow 0.3s;
   width: 90%;
-  /* height: ; */
+  z-index: 999;
   border-radius: 3px;
   h2 {
-    margin-top: 5px;
+    margin-top: 10px;
     a {
+      color: #000000;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       text-decoration: none;
@@ -41,21 +42,23 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: 14px;
   border: 2px solid #000000
-  transition: all 0.4s ease;
+  transition: all 0.6s ease;
   outline: 0;
   a {
     text-decoration: none;
+    color: #000000;
+    
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   margin-top: 5px;
   &:hover {
+    transition: all 0.6s ease;
     background-color: #000000;
    a {
      color: #FFFFFF;
 
    } 
     cursor: pointer;
-    transition: all 0.4s ease;
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
 `
