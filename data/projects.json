@@ -10,7 +10,7 @@
     "title": "Checo's Coffee",
     "slug": "checos-coffee",
     "url": "https://checo-next-prod.herokuapp.com/",
-    "image": "./images/checos-coffee.png",
+    "image": "./images/coffee-login.png",
     "description": "Online store built with React, Apollo, Next.js, GraphQL, Node.js, Prisma and many other tools. Fully tested using Jest & Enzyme and includes lots of interesting features such as handling permissions, stripe integration, image uploading and processing, etc. I was also able to learn a lot about deploying projects building this app."
   }
 ]
