@@ -14,7 +14,7 @@ const Home = () => {
             description
             image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 800, maxHeight: 600) {
                   ...GatsbyImageSharpFluid
                 }
               }

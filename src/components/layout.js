@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import './layout.css'
-const Main = styled.main`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 5rem auto;
-  max-width: 90%;
-  width: 57ch;
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 3px;
+  max-width: 1000px;
+  width: 100%;
 `
 const Header = styled.header`
   background-color: #000000;
@@ -34,7 +35,7 @@ const Layout = ({ children }) => (
       <Link to="/about">About Me</Link>
       <Link to="/contact">Contact</Link>
     </Header>
-    <Main className="content">{children}</Main>
+    <Container className="content">{children}</Container>
   </React.Fragment>
 )
 

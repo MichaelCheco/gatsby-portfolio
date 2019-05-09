@@ -1,16 +1,16 @@
 [
   {
-    "title": "My Project",
-    "slug": "project-1",
-    "url": "https://example.com/",
-    "image": "./images/me.jpg",
-    "description": "I built this to show off my sweet skills!"
+    "title": "ReCaller",
+    "slug": "recaller",
+    "url": "https://lambda-recaller.com/",
+    "image": "./images/Dashboard.png",
+    "description": "Recaller is an app that allows users to schedule calls between themselves and their loved ones. The app programmatically calls both the user and their loved one and records their call. It uses the Deepgram API to make a transcription of the call and then sends it to both parties by email. Previous recordings and transcripts are accessible online."
   },
   {
-    "title": "Another Project",
-    "slug": "project-2",
-    "url": "https://example.org/",
-    "image": "./images/project2.jpg",
-    "description": "This one is also good."
+    "title": "Checo's Coffee",
+    "slug": "checos-coffee",
+    "url": "https://checo-next-prod.herokuapp.com/",
+    "image": "./images/checos-coffee.png",
+    "description": "Online store built with React, Apollo, Next.js, GraphQL, Node.js, Prisma and many other tools. Fully tested using Jest & Enzyme and includes lots of interesting features such as handling permissions, stripe integration, image uploading and processing, etc. I was also able to learn a lot about deploying projects building this app."
   }
 ]
