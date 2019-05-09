@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Helmet from 'react-helmet'
 import { useSpring, animated } from 'react-spring'
-
 import { Link } from 'gatsby'
 import { Header, Wrapper, Div } from './about'
 import { P } from '../components/project'
@@ -10,6 +10,14 @@ const contact = () => {
 
   return (
     <>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+        />
+      </Helmet>
       <Header>
         <Link to="/">Projects</Link>
         <Link to="/about">About Me</Link>
