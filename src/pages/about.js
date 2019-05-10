@@ -110,8 +110,8 @@ const Icons = styled.div`
   width: 100%;
   a {
     color: #000000;
-    margin: 10px;
-    padding: 10px;
+    margin: 7px;
+    padding: 7px;
   }
   i {
     margin: 10px;
