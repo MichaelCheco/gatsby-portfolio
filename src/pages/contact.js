@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import { useSpring, animated } from 'react-spring'
 import { Link } from 'gatsby'
 import { Header, Wrapper, Div } from './about'
-import { P } from '../components/project'
 const contact = () => {
   const props = useSpring({ opacity: 1, from: { opacity: 0 } })
 
@@ -40,7 +39,7 @@ const contact = () => {
 }
 export const Card = styled.div`
   transition: box-shadow 0.3s;
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   height: 50%;
   margin: 20px 0;

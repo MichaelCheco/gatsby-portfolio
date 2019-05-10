@@ -28,9 +28,9 @@ export const Wrapper = styled.div`
 `
 export const Card = styled.div`
   transition: box-shadow 0.3s;
-  width: 100%;
+  width: 90%;
   max-width: 800px;
-  height: 50%;
+  height: 90%;
   margin: 20px 0;
   z-index: 999;
   border-radius: 3px;
@@ -117,12 +117,13 @@ const Icons = styled.div`
     padding: 10px;
     cursor: pointer;
   }
-  font-size: 70px;
+  font-size: 35px;
   justify-content: center;
 `
 const Container = styled.div`
   width: 100%;
   margin: 0 auto;
+  padding: 10px;
 `
 export const Div = styled.div`
   width: 100vw;
