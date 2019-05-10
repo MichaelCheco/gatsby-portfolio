@@ -8,13 +8,14 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   margin-top: 60px;
+
+  justify-items: center;
   border-radius: 3px;
   max-width: 1000px;
   width: 100%;
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
     margin-top: 40px;
-    align-items: center;
   }
 `
 const Div = styled.div`
