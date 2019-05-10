@@ -97,6 +97,9 @@ const about = () => {
                 <a href="https://www.linkedin.com/in/michael-checo-136ab6178/">
                   <i class="fab fa-linkedin" />
                 </a>
+                <a href="https://github.com/MichaelCheco">
+                  <i class="fab fa-github" />
+                </a>
               </Icons>
             </Card>
           </Wrapper>
@@ -110,15 +113,15 @@ const Icons = styled.div`
   width: 100%;
   a {
     color: #000000;
-    margin: 7px;
-    padding: 7px;
+    margin: 6px;
+    padding: 6px;
   }
   i {
-    margin: 10px;
-    padding: 10px;
+    margin: 6px;
+    padding: 6px;
     cursor: pointer;
   }
-  font-size: 35px;
+  font-size: 32px;
   justify-content: center;
 `
 const Container = styled.div`
