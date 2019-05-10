@@ -78,9 +78,10 @@ const about = () => {
           <Wrapper>
             <Card>
               <P>
-                I started my journey into Web Development nearly a year ago and
-                in that time I've had the opportunity to work with some
-                wonderful people. Along the way I have developed a strong
+                Hello, <strong>I'm Michael Checo</strong>. I'm a full-stack web
+                developer I started my journey into web development nearly a
+                year ago and in that time I've had the opportunity to work with
+                some wonderful people. Along the way I have developed a strong
                 skillset spanning multiple disciplines and am excited to find my
                 first opportunity in the industry where I hope to add value to a
                 company. Currently I am finishing my studies as a student at
