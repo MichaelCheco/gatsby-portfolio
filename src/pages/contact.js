@@ -26,6 +26,7 @@ const contact = () => {
         <Div />
         <Wrapper>
           <Card>
+            <h2>Click below to get in touch!</h2>
             <Icon>
               <a href="mailto:checomichael2@gmail.com">
                 <i class="fas fa-envelope" />
