@@ -78,14 +78,7 @@ const about = () => {
           <Wrapper>
             <Card>
               <P>
-                Hello, <strong>I'm Michael Checo</strong>. I'm a full-stack web
-                developer I started my journey into web development nearly a
-                year ago and in that time I've had the opportunity to work with
-                some wonderful people. Along the way I have developed a strong
-                skillset spanning multiple disciplines and am excited to find my
-                first opportunity in the industry where I hope to add value to a
-                company. Currently I am finishing my studies as a student at
-                Lambda School where I also work as a Teaching Assistant.
+                Hello, <strong>I'm Michael Checo</strong>. I am a Software Engineer based out of Oakland, California.
               </P>
               <Icons>
                 <a href="https://twitter.com/MichaelCheco1">
